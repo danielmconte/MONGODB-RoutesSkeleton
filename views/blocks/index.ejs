@@ -1,0 +1,25 @@
+<%- include ("../partials/header") %>
+    <h1>All EduBlocks</h1>
+    <div>
+        <a href="/blocks/new">Add EduBlock</a>
+    </div>
+   
+        <% for(let block of blocks) {%>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2><%= block.title %></h2>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h6 class="card-title"><%= block.summary %></h6>
+                            <a class="btn btn-primary" href="/blocks/<%= block._id %>">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+        <% } %>
+    
+
+<%- include ("../partials/footer") %>

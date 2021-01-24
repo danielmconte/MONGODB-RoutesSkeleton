@@ -1,0 +1,26 @@
+<%- include ("../partials/header") %>
+<div class="row">
+    <h1 class="text-center">New EduBlock</h1>
+    <div class="col-6 offset-3">         
+    <form action="/blocks" method="POST">
+        <div class="mb-3">
+            <label class="form-label" for="title">Title</label>
+            <input class="form-control" type="text" id="title" name="block[title]">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="image">Image URL</label>
+            <input class="form-control" type="text" id="image" name="block[image]">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="summary">Summary</label>
+            <input class="form-control" type="text" id="summary" name="block[summary]">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success">Add EduBlock</button>
+        </div>
+    </form>
+    <a href="/blocks">All blocks</a>
+    </div>
+</div>  
+
+<%- include ("../partials/footer") %> 
